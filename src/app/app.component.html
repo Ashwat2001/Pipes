@@ -1,0 +1,40 @@
+<div class="main">
+
+  <div>
+    <h1> Create custom pipes for storage file systems <br>
+
+      - convert bytes to MB, GB, TB </h1>
+    <p>Enter Byte : <br></p>
+    <input #chg>
+    <button (click)="convert(chg.value)">Convert</button>
+    <p>In MB : {{show3 | mB}}  <br></p>
+    <p>In GB : {{show3 | gB}} <br></p>
+    <p>In TB : {{show3 | tB}} <br></p>
+  </div>
+
+  <div>
+    <h1> Create custom pipes for conversion <br>
+
+      - Convert given string to uppercase </h1>
+    <p>Enter String To Change To Uppercase : </p>
+    <input #stn (keyup)="getString(stn.value)"> <br>
+    <p>Uppercase String: {{show2 | uppercase}} </p>
+  </div>
+
+  <div>
+    <h1> Exclude string from user inputs <br>
+
+      - Replace user string with another values </h1>
+    <p>String : Hello world</p>
+    <p>Filtered String : {{msg | change}}</p>
+  </div>
+
+  <div>
+    <h1> Mask the user inputs </h1>
+    <p>Enter 10-digit Number : </p>
+    <input #phn>
+    <button (click)="getValue(phn.value)">Mask</button>
+    <p>Masked Number : {{show1 | mask}} </p>
+  </div>
+
+</div>
